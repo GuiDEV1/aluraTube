@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { CSSReset } from "../src/componentes/CSSResset";
 import Menu from "../src/componentes/Menu";
 import { StyledTimeline } from "../src/componentes/Timeline";
+//import banner from "./imagens/front1.jpg";
 
 function HomePage() {
    const estilosDaHomePage = { 
@@ -41,28 +42,38 @@ export default HomePage
 // }
 
 const StyledHeader = styled.div`
-    img {
+    .img-perfil {
       width: 80px;
       height: 80px;   
-      border-radius: 50%;                                                                                                                         
+      border-radius: 50%; 
+      border: 1.7px solid blueviolet;                                                                                                                      : ;
     }
     .user-info {
       margin-top: 50px;
       display: flex;
       align-items: center;
       width: 100%;
-      padding: 16px 32px;
+      padding-left: 32px;
       gap: 16px;
+    }
+    .banner {
+      width: 100%;
+      height: 402px;
+      background-image: url(https://wallpapercave.com/wp/wp4924025.jpg);
+      background-size: cover;
+      background-position: center 43%;
+      
     }
   `;
 
 function Header() {
    return (
       <StyledHeader>
-         {/* <img src="banner"/> */}
+         
+         <div className="banner"></div>
 
          <section className="user-info">
-            <img src={`https://github.com/${config.github}.png`} />
+            <img className="img-perfil" src={`https://github.com/${config.github}.png`} />
 
             <div>
                <h2>
